@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: rgb(64, 41, 41);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1400px;
+  padding: 5rem 3rem;
+}
+.page .heading {
+  font-size: 2.1rem;
+  color: rgb(240, 188, 3);
+  text-align: center;
+  padding: 2rem 0 3rem;
+  font-family: "Italiana", serif;
+}
+
+.click {
+  background: rgb(240, 188, 3);
+  padding: 1rem 1.6rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  margin: 0.6rem 0;
+  font-weight: 600;
+  font-size: 1.15rem;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.click:hover {
+  background: #fff;
+  color: rgb(240, 188, 3);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 3rem 1rem;
+  transition: all 0.3s;
+}
+header nav.visible {
+  background: #372323;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.478);
+}
+header nav.active::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 0;
+  background: rgb(64, 41, 41);
+}
+header nav .logo {
+  color: rgb(240, 188, 3);
+  text-decoration: none;
+  font-size: 2.3rem;
+  font-family: "Italiana", serif;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 11;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+header nav ul a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.4s;
+}
+header nav ul a:hover {
+  color: rgb(240, 188, 3);
+}
+header nav .bars {
+  width: 20px;
+  position: fixed;
+  top: 30px;
+  right: 1.5rem;
+  align-self: center;
+  display: none;
+}
+header nav .bars .bar {
+  width: 100%;
+  height: 3px;
+  position: relative;
+  background: #fff;
+  border-radius: 2px;
+}
+header nav .bars .bar::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 2px;
+}
+header nav .bars .bar::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 14px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+main .hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 10rem;
+  justify-content: space-between;
+  background: linear-gradient(rgba(64, 41, 41, 0.85), rgba(64, 41, 41, 0.85)), url("./images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+}
+main .hero > div {
+  margin-top: 3rem;
+}
+main .hero .homeimage {
+  width: 450px;
+  height: 450px;
+  background: lightgrey;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main .hero .name {
+  font-size: 4.7rem;
+  font-family: "Italiana", serif;
+  color: rgb(240, 188, 3);
+}
+main .hero .name2 {
+  font-size: 4.7rem;
+  color: #fff;
+}
+main .hero p.info {
+  color: #fff;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}
+main #about .aboutimage {
+  height: 550px;
+  background: lightgray;
+  position: relative;
+}
+main #about .aboutimage .abouttext {
+  width: 70%;
+  background: #fff;
+  color: rgb(55, 55, 55);
+  padding: 2rem;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.15rem;
+}
+main #services .serviceflex {
+  display: flex;
+  gap: 3rem 2rem;
+  justify-content: space-evenly;
+  padding-top: 4rem;
+  flex-wrap: wrap;
+}
+main #services .serviceflex .service .serviceimage {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+main #services .serviceflex .service .servicename {
+  color: rgb(240, 188, 3);
+  font-weight: 600;
+  text-align: center;
+  padding: 2rem 0 0;
+}
+main #menu .menugrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem 1rem;
+  padding-top: 3rem;
+}
+main #menu .menugrid .menu {
+  background: #211515;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.478);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  max-width: 350px;
+  width: 100%;
+  justify-self: center;
+}
+main #menu .menugrid .menu .menuimage {
+  height: 200px;
+}
+main #menu .menugrid .menu .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+main #menu .menugrid .menu .details .foodname {
+  color: rgb(240, 188, 3);
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+}
+main #menu .menugrid .menu .details .foodprice {
+  color: lightgray;
+  font-size: 0.95rem;
+}
+main #contact .contactflex {
+  display: flex;
+  gap: 3rem;
+  justify-content: space-evenly;
+  padding: 3rem 0;
+}
+main #contact .contactflex .contactimage {
+  width: 50%;
+  height: 480px;
+  background: #211515;
+}
+main #contact .contactflex .form {
+  width: 50%;
+  height: 480px;
+  background: #2a1b1b;
+  padding: 2rem 2rem;
+}
+main #contact .contactflex .form .label {
+  text-align: center;
+  color: rgb(240, 188, 3);
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+main #contact .contactflex .form .click {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 1rem 0;
+}
+main #contact .contactflex .form form .control {
+  padding: 0.8rem 0;
+  display: flex;
+  flex-direction: column-reverse;
+}
+main #contact .contactflex .form form .control label {
+  display: block;
+  color: lightgrey;
+  font-size: 0.95rem;
+  padding-bottom: 0.3rem;
+}
+main #contact .contactflex .form form .control input, main #contact .contactflex .form form .control textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid lightgrey;
+  outline: none;
+  border-radius: 0.6rem;
+  resize: none;
+}
+main #contact .map {
+  height: 550px;
+  background: lightgrey;
+  margin: 2rem 0;
+}
+
+footer {
+  background: #000;
+  padding: 6.5rem 1rem;
+  position: relative;
+}
+footer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1300px;
+}
+footer > div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0 3rem;
+}
+footer > div ul a {
+  text-decoration: none;
+  color: lightgrey;
+  transition: all 0.4s;
+}
+footer > div ul a:hover {
+  color: rgb(240, 188, 3);
+}
+footer > div p {
+  color: lightgrey;
+  max-width: 550px;
+}
+footer > div p span {
+  display: block;
+  font-family: "Italiana", serif;
+  color: rgb(240, 188, 3);
+  font-size: 1.45rem;
+}
+footer .copy {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: -moz-max-content;
+  width: max-content;
+  color: grey;
+}
+
+@media (max-width: 1250px) {
+  main .hero {
+    padding: 7rem 5rem;
+  }
+}
+@media (max-width: 1100px) {
+  main .hero {
+    padding: 7rem 3rem;
+  }
+  main .hero .homeimage {
+    width: 400px;
+    height: 400px;
+  }
+  main .hero .name, main .hero .name2 {
+    font-size: 4rem;
+  }
+  main .hero .info {
+    font-size: 1.1rem;
+  }
+  main #menu .menugrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  header nav {
+    height: 80px;
+    padding-top: 1.5rem;
+    flex-direction: column;
+    gap: 3rem;
+    overflow: hidden;
+  }
+  header nav.active {
+    background: #4c3131;
+    height: auto;
+    padding-bottom: 4rem;
+  }
+  header nav.active::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 80px;
+    background: rgb(64, 41, 41);
+  }
+  header nav .bars {
+    display: block;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  main .hero {
+    flex-direction: column-reverse;
+    height: auto;
+    text-align: center;
+  }
+  main .hero .homeimage {
+    width: 350px;
+    height: 350px;
+  }
+  main .hero .name, main .hero .name2 {
+    font-size: 3.5rem;
+  }
+  main .hero .info {
+    font-size: 1.1rem;
+  }
+  main #about .aboutimage .abouttext {
+    width: 90%;
+    padding: 1rem;
+  }
+  main #menu .menugrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main #contact .contactflex {
+    flex-direction: column;
+  }
+  main #contact .contactflex div {
+    width: 100% !important;
+  }
+  footer > div {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+  }
+  footer > div ul {
+    padding-left: 0;
+  }
+}
+@media (max-width: 460px) {
+  .page {
+    padding: 5rem 1rem;
+  }
+  .page .heading {
+    font-size: 1.6rem;
+  }
+  main .hero .homeimage {
+    width: 300px;
+    height: 300px;
+  }
+  main .hero .name, main .hero .name2 {
+    font-size: 3rem;
+  }
+  main .hero .info {
+    font-size: 1rem;
+  }
+  main #menu .menugrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  main #contact .form {
+    padding: 2rem 1rem !important;
+  }
+  main #contact .form .label {
+    font-size: 1.3rem !important;
+  }
+}/*# sourceMappingURL=styles.css.map */
