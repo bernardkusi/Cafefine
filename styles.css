@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -61,7 +62,7 @@ header {
 header nav {
   display: flex;
   justify-content: space-between;
-  padding: 3rem 3rem 1rem;
+  padding: 1rem 3rem 1rem;
   transition: all 0.3s;
 }
 header nav.visible {
@@ -80,8 +81,8 @@ header nav.active::before {
 header nav .logo {
   color: rgb(240, 188, 3);
   text-decoration: none;
-  font-size: 2.3rem;
-  font-family: "Italiana", serif;
+  font-size: 2.55rem;
+  font-family: "Satisfy", cursive;
   width: -moz-fit-content;
   width: fit-content;
   z-index: 11;
@@ -90,11 +91,13 @@ header nav ul {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
+  align-self: flex-end;
 }
 header nav ul a {
   text-decoration: none;
   color: #fff;
   transition: all 0.4s;
+  font-size: 0.95rem;
 }
 header nav ul a:hover {
   color: rgb(240, 188, 3);
@@ -158,12 +161,12 @@ main .hero .homeimage {
   overflow: hidden;
 }
 main .hero .name {
-  font-size: 4.7rem;
-  font-family: "Italiana", serif;
+  font-size: 5rem;
+  font-family: "Satisfy", cursive;
   color: rgb(240, 188, 3);
 }
 main .hero .name2 {
-  font-size: 4.7rem;
+  font-size: 4rem;
   color: #fff;
 }
 main .hero p.info {
@@ -329,7 +332,7 @@ footer > div p {
 }
 footer > div p span {
   display: block;
-  font-family: "Italiana", serif;
+  font-family: "Satisfy", cursive;
   color: rgb(240, 188, 3);
   font-size: 1.45rem;
 }
@@ -369,11 +372,14 @@ footer .copy {
 }
 @media (max-width: 900px) {
   header nav {
-    height: 80px;
-    padding-top: 1.5rem;
+    height: 70px;
+    padding-top: 1rem;
     flex-direction: column;
     gap: 3rem;
     overflow: hidden;
+  }
+  header nav .logo {
+    font-size: 2rem;
   }
   header nav.active {
     background: #4c3131;
@@ -386,7 +392,7 @@ footer .copy {
     top: 0;
     content: "";
     width: 100%;
-    height: 80px;
+    height: 70px;
     background: rgb(64, 41, 41);
   }
   header nav .bars {
@@ -394,6 +400,7 @@ footer .copy {
   }
   header nav ul {
     flex-direction: column;
+    align-self: flex-start;
     gap: 2rem;
   }
   main .hero {
@@ -440,6 +447,12 @@ footer .copy {
   .page .heading {
     font-size: 1.6rem;
   }
+  main .hero {
+    padding-top: 3rem;
+  }
+  main .hero > div {
+    margin-top: 1rem;
+  }
   main .hero .homeimage {
     width: 300px;
     height: 300px;
@@ -458,5 +471,8 @@ footer .copy {
   }
   main #contact .form .label {
     font-size: 1.3rem !important;
+  }
+  main #about .aboutimage .abouttext {
+    font-size: 0.95rem;
   }
 }/*# sourceMappingURL=styles.css.map */

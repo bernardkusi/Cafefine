@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 $primary :rgb(64, 41, 41);
 $secondary: rgb(240, 188, 3);
 $text :rgb(55, 55, 55);
@@ -67,7 +68,7 @@ header{
     nav{
         display: flex;
         justify-content: space-between;
-        padding: 3rem 3rem 1rem;
+        padding: 1rem 3rem 1rem;
         // background: red;
         transition: all .3s;
 
@@ -93,8 +94,10 @@ header{
         .logo{
             color: $secondary;
             text-decoration: none;
-            font-size: 2.3rem;
-            font-family: 'Italiana', serif;
+            font-size: 2.55rem;
+            // font-family: 'Italiana', serif;
+            font-family: 'Satisfy', cursive;
+
             width: fit-content;
             z-index: 11;
         }
@@ -103,11 +106,13 @@ header{
             display: flex;
             flex-direction: row;
             gap: 1.5rem;
+            align-self: flex-end;
 
             a{
                 text-decoration: none;
                 color: #fff;
                 transition: all .4s;
+                font-size: .95rem;
 
                 &:hover{
                     color: $secondary;
@@ -183,14 +188,15 @@ main{
         }
 
         .name{
-            font-size: 4.7rem;
-            font-family: 'Italiana', serif;
+            font-size: 5rem;
+            // font-family: 'Italiana', serif;
+            font-family: 'Satisfy', cursive;
             // padding-left: 2rem;
             color: $secondary;
         }
 
         .name2{
-            font-size: 4.7rem;
+            font-size: 4rem;
             color: #fff;
         }
 
@@ -396,7 +402,8 @@ footer{
 
             span{
                 display: block;
-                font-family: 'Italiana', serif;
+                // font-family: 'Italiana', serif;
+                font-family: 'Satisfy', cursive;
                 color: $secondary;
                 font-size: 1.45rem;
             }
